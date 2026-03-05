@@ -14,12 +14,11 @@ btn.addEventListener("click", () => {
 
   async function get_memes() {
     try {
-        console.log("clicked");
       const res = await fetch("https://api.imgflip.com/get_memes");
       const data = await res.json();
 
       const memes = data.data.memes;    
-      const index = value - 1;          
+      const index = value       
       const choose = memes[index];      
 
       appear.innerHTML = `<img src="${choose.url}" 
